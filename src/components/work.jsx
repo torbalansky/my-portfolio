@@ -26,7 +26,7 @@ const FloatingArrow = ({ className }) => {
         borderBottom: "10px solid transparent",
         borderLeft: "20px solid #d1f8fd",
         position: "fixed",  
-        bottom: "20px",
+        bottom: "40px",
         right: "20px",
       }}
     ></motion.div>
@@ -103,7 +103,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
 
 const Work = () => {
   return (
-    <section className="h-max-content mt-[100px] items-center justify-center h-screen">
+    <section className="h-full mt-[100px] items-center justify-center h-screen mb-[50px]">
         <h2 className={`${styles.pHeadText} text-center`}>My work.</h2>
       <ProjectCardContainer>
         {projects.map((projects, index) => (

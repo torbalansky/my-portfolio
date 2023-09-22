@@ -80,3 +80,11 @@
     #c0c0c0
   );
 }
+
+
+
+@media (max-width: 640px) {
+  .custom-top-margin {
+    margin-top: 350px; 
+  }
+}
