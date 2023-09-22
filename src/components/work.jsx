@@ -8,11 +8,6 @@ import { Tilt } from 'react-tilt';
 import { projects } from "../constants";
 import { github } from "../img";
 
-const Section = styled.div`
-  height: max-content;
-  margin-top: 100px;
-`;
-
 const FloatingArrow = ({ className }) => {
   return (
     <motion.div
@@ -30,6 +25,9 @@ const FloatingArrow = ({ className }) => {
         borderTop: "10px solid transparent",
         borderBottom: "10px solid transparent",
         borderLeft: "20px solid #d1f8fd",
+        position: "fixed",  
+        bottom: "20px",
+        right: "20px",
       }}
     ></motion.div>
   );
@@ -38,8 +36,8 @@ const FloatingArrow = ({ className }) => {
 const ProjectCardContainer = styled.div`
   display: grid;
   gap: 10px;
-  margin: 40px 20px;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
 
   @media (max-width: 640px) {
     grid-template-columns: repeat(1fr);
@@ -54,20 +52,20 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
         options={{
           max: 8,  
           scale: 1.02,
-          speed: 250, 
+          speed: 250,
         }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[400px] w-full'
       >
-        <div className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[280px]'>
           <img
             src={image}
             alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
+            className='w-full h-full object-fill rounded-2xl'
           />
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code, "_blank")}
-              className='green-text-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='green-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
           </div>
           </div>
@@ -85,8 +83,8 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
             </div>
           </div>
         <div className='mt-3'>
-          <h3 className='text-white font-bold text-[20px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white font-bold text-[18px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[14px] text-justify'>{description}</p>
         </div>
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
@@ -105,22 +103,19 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
 
 const Work = () => {
   return (
-    <Section className="m-10">
-      <motion.div>
-        <h2 className={styles.pSubText}>Some of my projects:</h2>
-      </motion.div>
+    <section className="h-max-content mt-[100px] items-center justify-center h-screen">
+        <h2 className={`${styles.pHeadText} text-center`}>My work.</h2>
       <ProjectCardContainer>
         {projects.map((projects, index) => (
           <ProjectCard key={projects.title} index={index} {...projects} />
         ))}
       </ProjectCardContainer>
-      <div className="absolute bottom right-4 mr-6">
+      <div>
         <Link to="/contact">
           <FloatingArrow />
-          <p className="text-white mt-2">Contact me</p>
         </Link>
       </div>
-    </Section>
+    </section>
   );
 };
 

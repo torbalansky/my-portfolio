@@ -4,8 +4,7 @@ import {
   html,
   css,
   reactjs,
-  redux,
-  tailwind,
+  aws,
   nodejs,
   mongodb,
   git,
@@ -15,6 +14,7 @@ import {
   chat_app,
   MyFlix_Angular,
   movie_api,
+  angular
 } from "../img";
 
 export const navLinks = [
@@ -54,12 +54,12 @@ const tech = [
     icon: reactjs,
   },
   {
-    title: "Redux Toolkit",
-    icon: redux,
+    title: "AWS",
+    icon: aws,
   },
   {
-    title: "Tailwind CSS",
-    icon: tailwind,
+    title: "Angular",
+    icon: angular,
   },
   {
     title: "Node JS",

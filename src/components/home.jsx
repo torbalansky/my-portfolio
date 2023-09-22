@@ -25,7 +25,10 @@ const FloatingArrow = ({ className }) => {
         background: "transparent",
         borderTop: "10px solid transparent",
         borderBottom: "10px solid transparent",
-        borderLeft: "20px solid #d1f8fd", 
+        borderLeft: "20px solid #d1f8fd",
+        position: "fixed",  
+        bottom: "20px",
+        right: "20px",
       }}
     ></motion.div>
   );
@@ -52,10 +55,9 @@ const Home = () => {
        </a>
         </div>
       </div>
-      <div className="absolute bottom right-4 mr-6">
+      <div>
         <Link to="/about">
           <FloatingArrow />
-          <p className="text-white mt-2">Click me</p>
         </Link>
       </div>
     </Section>

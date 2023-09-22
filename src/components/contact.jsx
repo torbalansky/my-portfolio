@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Map from "./map";
+import { styles } from "../styles";
 
 const Contact = () => {
   const formRef = useRef();
@@ -63,7 +64,7 @@ const Contact = () => {
     <section className="w-full h-full mt-[30px] flex xl:flex-row flex-col-reverse overflow-hidden">
       <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row">
         <div className="md:p-20 w-full md:w-[50%]">
-        <p className="font-bold"> Get in touch:</p>
+        <p className={`${styles.SubText} text-center mt-1`}>Contact</p>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
@@ -106,7 +107,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="bg-blue-600 py-2 w-fit text-white font-bold shadow-md shadow-primary w-[200px] hover:bg-blue-800 mt-2 mb-2"
+                className="bg-blue-600 py-2 text-white font-bold shadow-md shadow-primary w-[300px] hover:bg-blue-800 mt-2 mb-2"
               >
                 {loading ? "Sending..." : "Send"}
               </button>

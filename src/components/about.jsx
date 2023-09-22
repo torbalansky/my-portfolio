@@ -7,11 +7,6 @@ import { fade } from "../animations";
 import { Tilt } from 'react-tilt';
 import { tech } from "../constants";
 
-const Section = styled.div`
-  height: max-content;
-  margin-top: 100px;
-`;
-
 const FloatingArrow = ({ className }) => {
   return (
     <motion.div
@@ -29,15 +24,20 @@ const FloatingArrow = ({ className }) => {
         borderTop: "10px solid transparent",
         borderBottom: "10px solid transparent",
         borderLeft: "20px solid #d1f8fd",
+        position: "fixed",  
+        bottom: "20px",
+        right: "20px",
       }}
     ></motion.div>
   );
 };
 
 const ServiceCardContainer = styled.div`
+  width: 90%;
   display: grid;
   gap: 10px;
   margin-bottom: 20px;
+  padding: 20px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
   @media (max-width: 640px) {
@@ -77,13 +77,13 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <Section className="m-10">
+    <section className="h-max-content mt-[100px] flex flex-col items-center justify-center h-screen">
       <motion.div>
         <h2 className={styles.pHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
-        className='m-4 text-secondary text-[16px] max-w-5xl leading-[30px]'
+        className='m-4 text-secondary text-[15px] max-w-5xl leading-[30px]'
       >
         I'm a biochemist turned web developer passionate about creating accessible and inclusive digital content.
         With a PhD background in biochemistry, I bring a unique problem-solving perspective to data analysis.
@@ -103,13 +103,12 @@ const About = () => {
         ))}
       </ServiceCardContainer>
 
-      <div className="absolute bottom right-4 mr-6">
+      <div>
         <Link to="/work">
           <FloatingArrow />
-          <p className="text-white mt-2">Hit me</p>
         </Link>
       </div>
-    </Section>
+    </section>
   );
 };
 
