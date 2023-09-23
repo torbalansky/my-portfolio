@@ -37,12 +37,12 @@ const FloatingArrow = ({ className }) => {
 const ProjectCardContainer = styled.div`
   display: -ms-grid;
   display: grid;
-  gap: 10px;
+  gap: 30px;
   padding: 20px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
 
   @supports (-moz-appearance: none) {
-    gap: 20px;
+    gap: 30px;
   }
 
   @media (max-width: 640px) {

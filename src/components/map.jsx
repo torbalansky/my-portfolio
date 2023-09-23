@@ -35,12 +35,12 @@ const Map = () => {
         dy={-30}
         connectorProps={{
           stroke: "white",
-          strokeWidth: 0.8,
+          strokeWidth: 1,
           strokeLinecap: "round"
         }}
       >
          {/* Add text to the annotation */}
-        <text x="40" textAnchor="end" alignmentBaseline="middle" fill="white">
+        <text y="-20" x="-15" textAnchor="" alignmentBaseline="middle" fill="white">
           {"I live here"}
         </text>
       </Annotation>
