@@ -101,12 +101,12 @@
 }
 
 .silver-gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#d0f1f6), to(#333333));
-  background: -o-linear-gradient(top, #d0f1f6, #333333);
-  background: linear-gradient(to bottom, #d0f1f6, #333333);
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcd0f6), to(#333333));
+  background: -o-linear-gradient(top, #dcd0f6, #333333);
+  background: linear-gradient(to bottom, #dcd0f6, #333333);
   background: -webkit-linear-gradient(
     to bottom,
-    #d0f1f6,
+    #dcd0f6,
     #333333
   );
 }
@@ -175,5 +175,14 @@
 
   .custom-media2 {
     display: none;
+  }
+}
+
+
+/* Internet Explorer-specific styles */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE-specific styles here */
+  .grid-container {
+    display: contents;
   }
 }

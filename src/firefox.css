@@ -1,0 +1,9 @@
+/* firefox.css */
+@-moz-document url-prefix() {
+    /* Add CSS rules here that apply only to Firefox */
+    .grid-container {
+      /* Adjust grid styles for Firefox */
+      grid-gap: 50px;
+    }
+  }
+  
