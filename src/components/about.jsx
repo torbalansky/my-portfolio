@@ -45,15 +45,16 @@ const ServiceCardContainer = styled.div`
   @media (max-width: 640px) {
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
+    margin-right: 100px;
   }
 `;
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='w-full'>
+  <Tilt className='w-full silver-gradient rounded-[20px]'>
     <motion.div
       variants={fade("right", "spring", index * 0.5, 0.7)}
-      className='p-[1px] rounded-[10px] shadow-card'
-      style={{ width: "150px", height: "100px" }}
+      className='p-[1px] rounded-[10px]'
+      style={{ width: "200px", height: "100px"}}
     >
       <div
         options={{
