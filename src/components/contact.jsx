@@ -1,10 +1,14 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser"; // Import emailjs library for sending emails
 import Map from "./map";
-import { styles } from "../styles";
+import facebookIcon from "../img/facebook.png";
+import twitterIcon from "../img/twitter.png";
+import githubIcon from "../img/github_logo.png";
 
 const Contact = () => {
+  // Create a reference to the form element
   const formRef = useRef();
+  // Initialize state for form input values
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -13,20 +17,23 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
+  // Function to handle changes in form input fields
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
 
+    // Update the form state with the new input value
     setForm({
       ...form,
       [name]: value,
     });
   };
 
+  // Function to handle form submission (sending email)
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+    // Send email using emailjs
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID,
       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -44,7 +51,8 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I'll get back to you asap.");
-
+          
+          // Clear the form input fields after successful submission
           setForm({
             name: "",
             email: "",
@@ -63,8 +71,19 @@ const Contact = () => {
   return (
     <section id="contact" className="w-full h-full mt-[50px] flex xl:flex-row flex-col-reverse overflow-hidden">
       <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row">
+        <div className="max-w-7xl mx-auto p-5 bg-gray-700 text-white">
+          <p>Contact Information: torbalansky@gmail.com</p>
+          <p>Phone: +351910808938</p>
+          <div className="flex flex-row justify-between mt-2">
+          <a href="https://www.facebook.com/patzu.rs"><img src={facebookIcon} alt="Facebook" /></a>
+           <a href="https://twitter.com/pstathis2"><img src={twitterIcon} alt="Twitter" /></a>
+          <a href="https://github.com/torbalansky"><img src={githubIcon} alt="GitHub" /></a>
+          </div>
+        </div>
+      </div>
+      <div className="w-full flex flex-col md:flex-row items-center justify-center space-y-2 custom-media3">
         <div className="md:p-20 w-full md:w-[50%]">
-        <p className={`text-[30px] text-center mt-2`}>Contact...</p>
+          <p className={`text-[40px] mt-2 p-5`}>Contact me</p>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
@@ -107,16 +126,16 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="bg-blue-600 py-2 text-white font-bold shadow-md shadow-primary w-[300px] hover:bg-blue-800 mt-2 mb-4"
+                className="bg-blue-600 py-2 text-white font-bold shadow-md shadow-primary w-[300px] hover:bg-blue-800 mb-4"
               >
                 {loading ? "Sending..." : "Send"}
               </button>
             </form>
-          </div>
         </div>
-        <div className="flex flex-2 w-full h-full">
+        <div className="flex flex-0.5 w-full h-screen custom-media2">
           <Map></Map>
         </div>
+      </div>
     </section>
   );
 };

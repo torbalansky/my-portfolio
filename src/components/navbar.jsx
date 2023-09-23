@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { styles } from "../styles";
 import { logo, menu, close } from "../img";
 
+// Define navigation links
 const navLinks = [
   {
     id: "home",
@@ -23,16 +24,18 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  // useState to manage the active navigation link and toggle for mobile menu
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const location = useLocation();
-
+  
+  // useEffect to update the active link when the location changes
   useEffect(() => {
     setActive(location.pathname);
   }, [location]);
 
   return (
-    <nav id="navbar" className={`${styles.padding1} w-full flex items-center py-3 fixed top-0 z-20 bg-gray-800`}>
+    <nav id="navbar" className={`${styles.padding1} w-full flex items-center py-3 fixed top-0 z-20 bg-gray-900`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-1">
           <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
@@ -53,7 +56,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
+        
+        {/* Mobile menu */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}

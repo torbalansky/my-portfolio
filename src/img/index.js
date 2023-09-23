@@ -1,3 +1,4 @@
+// Importing various image assets for logos, icons, and project images
 import logo from "./logo.png";
 import github from "./github.png";
 import menu from "./menu.svg";

@@ -2,7 +2,7 @@ import React from "react";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei"; // Import 3D-related components
 import { Canvas } from "@react-three/fiber";
 import homeImg from "../img/home.png";
 
@@ -53,10 +53,12 @@ const Home = () => {
       </div>
       <div className="relative flex flex-3 h-full w-full">
           <Canvas>
+            {/* Add lighting and controls for the 3D model */}
             <OrbitControls enableZoom={false} />
-            <ambientLight intensity={2} />
+            <ambientLight intensity={2} /> {/* Directional light with position */}
             <directionalLight position={[3, 2, 1]} />
             <Sphere args={[1, 100, 200]} scale={2.4}>
+              {/* 3D sphere with custom material */}
             <MeshDistortMaterial color="#804dee" attach="material" distort={0.6} speed={0.4}/>
             </Sphere>
           </Canvas>

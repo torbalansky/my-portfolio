@@ -1,12 +1,13 @@
 import React from "react";
 import { styles } from "../styles";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // Framer Motion library for animations
 import { Link } from "react-router-dom";
 import { fade } from "../animations";
-import { Tilt } from 'react-tilt';
+import { Tilt } from 'react-tilt'; // React Tilt library for interactive tilting effect
 import { tech } from "../constants";
 
+// A component for a floating arrow animation
 const FloatingArrow = ({ className }) => {
   return (
     <motion.div
@@ -32,6 +33,7 @@ const FloatingArrow = ({ className }) => {
   );
 };
 
+// Styled component for a container of service cards
 const ServiceCardContainer = styled.div`
   width: 90%;
   display: grid;

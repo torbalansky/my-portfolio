@@ -1,3 +1,5 @@
+// Importing various image assets for technology icons and project images
+
 import {
   javascript,
   typescript,
@@ -17,21 +19,7 @@ import {
   angular
 } from "../img";
 
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
-
+// Array of technology stacks with titles and corresponding icons
 const tech = [
   {
     title: "HTML 5",
@@ -75,6 +63,7 @@ const tech = [
   },
 ];
 
+// Array of project details, including name, description, tags, image, and source code URL
 const projects = [
   {
     name: "Movie API",
@@ -126,7 +115,7 @@ const projects = [
   {
     name: "Myflix-Angular",
     description:
-      "MyFlix Angular is a dynamic and user-friendly web application built with Angular, TypeScript, HTML, and SCSS. Utilizing MongoDB, Express.js, and Node.js on the backend, it allows users to explore movie details, such as descriptions, genres, and directors, and create a personalized list of favorites films.",
+      "MyFlix Angular is a dynamic and user-friendly web application built with Angular, TypeScript, HTML, and SCSS. Utilizing MongoDB, Express.js, and Node.js on the backend, it allows users to explore movie details, such as descriptions, genres, directors, ratings, and reviews, and create a personalized list of favorite films.",
     tags: [
       {
         name: "reactjs",
@@ -148,7 +137,7 @@ const projects = [
   {
     name: "Meet App",
     description:
-      "MeetApp is a web application developed following the principles of test-driven development (TDD). It's designed to work without needing a server, and it's built using technologies like React and JavaScript. It also makes use of the Google Calendar API to get information about upcoming events and relies on AWS Lambda to handle user access securely.",
+      "MeetApp is a serverless web app developed with TDD principles, powered by React and JavaScript. It integrates the Google Calendar API for event data and relies on AWS Lambda for secure user access management.",
     tags: [
       {
         name: "react",
@@ -170,7 +159,7 @@ const projects = [
   {
     name: "SWAPI Planets Explorer",
     description:
-      "The SWAPI app is a simple web application that lets users search for and view information about different star wars planets. It's built using HTML, CSS, JavaScript, Bootstrap, and jQuery. The app uses the SWAPI to retrieve data about star wars planets.",
+      "The SWAPI app is a simple web application that lets users search for and view information about different star wars planets. It's built using HTML, CSS, JavaScript, Bootstrap, and jQuery. It uses the SWAPI to retrieve data about planets.",
     tags: [
       {
         name: "javascript",
@@ -205,11 +194,7 @@ const projects = [
       {
         name: "google firebase",
         color: "orange-gradient",
-      },
-      {
-        name: "expo",
-        color: "",
-      },
+      }
     ],
     image: chat_app,
     source_code: "https://github.com/torbalansky/swapi-planets-explorer",

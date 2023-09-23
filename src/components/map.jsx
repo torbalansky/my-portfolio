@@ -17,6 +17,7 @@ const Map = () => {
         scale: 1400
       }}
     >
+       {/* Render geographical features on the map */}
       <Geographies
         geography="/features.json"
         fill="#dbdbf4"
@@ -39,7 +40,8 @@ const Map = () => {
           strokeLinecap: "round"
         }}
       >
-        <text x="35" textAnchor="end" alignmentBaseline="middle" fill="white">
+         {/* Add text to the annotation */}
+        <text x="40" textAnchor="end" alignmentBaseline="middle" fill="white">
           {"I live here"}
         </text>
       </Annotation>

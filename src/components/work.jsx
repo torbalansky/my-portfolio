@@ -33,6 +33,7 @@ const FloatingArrow = ({ className }) => {
   );
 };
 
+// Styled component for the project card container
 const ProjectCardContainer = styled.div`
   display: grid;
   gap: 10px;
@@ -42,6 +43,8 @@ const ProjectCardContainer = styled.div`
   @media (max-width: 640px) {
     grid-template-columns: repeat(1fr);
     margin:auto;
+    width: 100%;
+    padding-right: 40px;
   }
 `;
 
@@ -54,7 +57,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
           scale: 1.02,
           speed: 250,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[400px] w-full'
+        className='violet-gradient p-5 rounded-2xl sm:w-[400px] w-full'
       >
         <div className='relative w-full h-[280px]'>
           <img
@@ -73,7 +76,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='w-20 h-20 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
                 src={github}

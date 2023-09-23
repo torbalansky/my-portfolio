@@ -81,9 +81,10 @@
   );
 }
 
-@media (max-width: 640px) {
+@media (max-width: 729px) {
   .custom-top-margin {
-    margin-top: 350px; 
+    height:auto; 
+    width: 100;
   }
 }
 
@@ -98,9 +99,20 @@
   }
 }
 
-
-@media (max-width: 640px) {
+@media (max-width: 1080px),
+       (max-width: 640px) {
   .custom-media2 {
     display: none;
+  }
+
+  .contact-section {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 667px) {
+  .custom-media3 {
+    margin-top: 0 !important;
+    margin-bottom: 100px;
   }
 }
