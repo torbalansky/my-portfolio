@@ -35,14 +35,19 @@ const FloatingArrow = ({ className }) => {
 
 // Styled component for the project card container
 const ProjectCardContainer = styled.div`
+  display: -ms-grid;
   display: grid;
   gap: 10px;
   padding: 20px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
 
+  @supports (-moz-appearance: none) {
+    gap: 20px;
+  }
+
   @media (max-width: 640px) {
     grid-template-columns: repeat(1fr);
-    margin:auto;
+    margin: auto;
     width: 100%;
     padding-right: 40px;
   }
@@ -57,15 +62,15 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
           scale: 1.02,
           speed: 250,
         }}
-        className='violet-gradient p-5 rounded-2xl sm:w-[400px] w-full'
+        className='violet-gradient p-5 rounded-2xl sm:w-[400px] w-full grid-container'
       >
-        <div className='relative w-full h-[280px]'>
+        <div className='relative w-full h-[280px] ie-img'>
           <img
             src={image}
             alt='project_image'
             className='w-full h-full object-fill rounded-2xl'
           />
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          <div className='absolute inset-0 flex justify-end m-3 card-img_hover grid-container'>
             <div
               onClick={() => window.open(source_code, "_blank")}
               className='green-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
@@ -85,7 +90,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
               />
             </div>
           </div>
-        <div className='mt-3'>
+        <div className='mt-3 grid-container'>
           <h3 className='text-white font-bold text-[18px]'>{name}</h3>
           <p className='mt-2 text-secondary text-[14px] text-justify'>{description}</p>
         </div>

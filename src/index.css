@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -8,7 +15,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
   scroll-behavior: smooth;
   color-scheme: dark;
@@ -16,6 +24,8 @@
 
 .violet-gradient {
   background: #804dee;
+  background: -webkit-gradient(linear, right top, left top, from(#804dee), to(rgba(60, 51, 80, 50)));
+  background: -o-linear-gradient(right, #804dee 0%, rgba(60, 51, 80, 50) 100%);
   background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 50) 100%);
   background: -webkit-linear-gradient(
     -90deg,
@@ -26,8 +36,14 @@
 
 .orange-gradient {
   background: #f12711; 
-  background: -webkit-linear-gradient(
-    to top,
+  background: -webkit-gradient(
+    linear,
+    left bottom, left top,
+    from(#f12711),
+    to(#f5af19)
+  ); 
+  background: -o-linear-gradient(
+    bottom,
     #f12711,
     #f5af19
   ); 
@@ -42,8 +58,14 @@
 
 .green-gradient {
   background: #11998e; 
-  background: -webkit-linear-gradient(
-    to top,
+  background: -webkit-gradient(
+    linear,
+    left bottom, left top,
+    from(#11998e),
+    to(#38ef7d)
+  ); 
+  background: -o-linear-gradient(
+    bottom,
     #11998e,
     #38ef7d
   ); 
@@ -58,8 +80,14 @@
 
 .blue-gradient {
   background: #56ccf2; 
-  background: -webkit-linear-gradient(
-    to top,
+  background: -webkit-gradient(
+    linear,
+    left bottom, left top,
+    from(#2f80ed),
+    to(#56ccf2)
+  ); 
+  background: -o-linear-gradient(
+    bottom,
     #2f80ed,
     #56ccf2
   ); 
@@ -73,6 +101,8 @@
 }
 
 .silver-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(192, 192, 192, 0)), to(#c0c0c0));
+  background: -o-linear-gradient(top, rgba(192, 192, 192, 0), #c0c0c0);
   background: linear-gradient(to bottom, rgba(192, 192, 192, 0), #c0c0c0);
   background: -webkit-linear-gradient(
     to bottom,
@@ -92,10 +122,19 @@
   .custom-media {
     width: 100%;
     height: auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
@@ -106,7 +145,10 @@
   }
 
   .contact-section {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -114,5 +156,23 @@
   .custom-media3 {
     margin-top: 0 !important;
     margin-bottom: 100px;
+  }
+}
+
+/* Add your existing CSS here */
+
+/* Apply specific styles only for Mozilla Firefox */
+@supports (-moz-appearance: none) {
+  .custom-media3 {
+    gap: 10px; /* Adjust the gap as needed for Firefox */
+    margin-top: 25px;
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .custom-media2 {
+    display: none;
   }
 }

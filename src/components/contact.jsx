@@ -69,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full h-full mt-[50px] flex xl:flex-row flex-col-reverse overflow-hidden">
+    <section id="contact" className="w-full h-full mt-[50px] flex xl:flex-row flex-col-reverse overflow-hidden custom-media3">
       <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row">
         <div className="max-w-7xl mx-auto p-5 bg-gray-700 text-white">
           <p>Contact Information: torbalansky@gmail.com</p>
@@ -83,7 +83,7 @@ const Contact = () => {
       </div>
       <div className="w-full flex flex-col md:flex-row items-center justify-center space-y-2 custom-media3">
         <div className="md:p-20 w-full md:w-[50%]">
-          <p className={`text-[40px] mt-2 p-5`}>Contact me</p>
+          <p className={`text-[40px] mt-2 p-5`}>Contact</p>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
