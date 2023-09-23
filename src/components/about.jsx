@@ -77,7 +77,7 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <section className="h-full custom-top-margin mt-[100px] flex flex-col items-center justify-center h-screen">
+    <section id="about" className="h-full custom-top-margin mt-[100px] flex flex-col items-center justify-center h-screen">
       <motion.div>
         <h2 className={styles.pHeadText}>Overview.</h2>
       </motion.div>

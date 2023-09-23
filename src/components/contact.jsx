@@ -61,10 +61,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full h-full mt-[30px] flex xl:flex-row flex-col-reverse overflow-hidden">
+    <section id="contact" className="w-full h-full mt-[50px] flex xl:flex-row flex-col-reverse overflow-hidden">
       <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row">
         <div className="md:p-20 w-full md:w-[50%]">
-        <p className={`${styles.SubText} text-center mt-1`}>Contact</p>
+        <p className={`text-[30px] text-center mt-2`}>Contact...</p>
           <form
             ref={formRef}
             onSubmit={handleSubmit}

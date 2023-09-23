@@ -32,11 +32,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav
-      className={`${
-        styles.padding1
-      } w-full flex items-center py-3 fixed top-0 z-20 bg-gray-900`}
-    >
+    <nav id="navbar" className={`${styles.padding1} w-full flex items-center py-3 fixed top-0 z-20 bg-gray-800`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-1">
           <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
@@ -45,13 +41,13 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-10 text-white">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
-                active === `/${nav.id}` ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === `/${nav.id}` ? "text-purple-200" : "text-secondary"
+              } hover:text-purple-400 text-[18px] font-medium cursor-pointer`}
             >
               <Link to={`/${nav.id}`}>{nav.title}</Link>
             </li>
@@ -75,7 +71,7 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  className={`font-roboto font-medium cursor-pointer text-[16px] ${
                     active === `/${nav.id}` ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {

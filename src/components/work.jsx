@@ -103,7 +103,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
 
 const Work = () => {
   return (
-    <section className="h-full mt-[100px] items-center justify-center h-screen mb-[50px]">
+    <section id="work" className="h-full mt-[100px] items-center justify-center h-screen mb-[50px]">
         <h2 className={`${styles.pHeadText} text-center`}>My work.</h2>
       <ProjectCardContainer>
         {projects.map((projects, index) => (
