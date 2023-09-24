@@ -81,7 +81,7 @@ const ProjectCardContainer = styled.div`
 const ProjectCard = ({index, name, description, tags, image, source_code}) => {
   const openGitHubRepository = () => {
     const confirmGitHub = window.confirm(
-      "You are about to leave my website and visit the GitHub repository. Do you want to proceed?"
+      "You are about to visit the GitHub repository. Do you want to proceed?"
     );
 
     if (confirmGitHub) {
