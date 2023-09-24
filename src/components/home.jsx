@@ -51,7 +51,7 @@ const Home = () => {
         </div>
       </div>
       </div>
-      <div className="relative flex flex-3 h-full w-full">
+      <div className="relative flex flex-3 h-full w-full home_3d">
           <Canvas>
             {/* Add lighting and controls for the 3D model */}
             <OrbitControls enableZoom={false} />
@@ -62,7 +62,7 @@ const Home = () => {
             <MeshDistortMaterial color="#804dee" attach="material" distort={0.6} speed={0.4}/>
             </Sphere>
           </Canvas>
-          <img src={homeImg} alt="HomeImage" className="w-[300px] h-[300px] object-contain absolute inset-0 m-auto animate-spin-slow alternate ease-in-out infinite"/>
+          <img src={homeImg} alt="HomeImage" className="w-[300px] h-[300px] object-contain absolute inset-0 m-auto animate-spin-slow alternate ease-in-out infinite home_img"/>
         </div>
       <div>
         <Link to="/about">

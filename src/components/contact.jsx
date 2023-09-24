@@ -69,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full h-full mt-[50px] flex xl:flex-row flex-col-reverse overflow-hidden custom-media3">
+    <section id="contact" className="w-full h-full flex xl:flex-row flex-col-reverse overflow-hidden custom-media3">
       <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row">
         <div className="max-w-7xl mx-auto p-5 bg-gray-700 text-white">
           <p>Contact Information: torbalansky@gmail.com</p>

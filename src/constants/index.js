@@ -137,7 +137,7 @@ const projects = [
   {
     name: "Meet App",
     description:
-      "MeetApp is a serverless web app developed with TDD principles, powered by React and JavaScript. It integrates the Google Calendar API for event data and relies on AWS Lambda for secure user access management.",
+      "MeetApp is a web application developed following the principles of test-driven development (TDD). It's designed to work without needing a server, and it's built using technologies like React and JavaScript. It also makes use of the Google Calendar API to get information about upcoming events and relies on AWS Lambda to handle user access securely.",
     tags: [
       {
         name: "react",

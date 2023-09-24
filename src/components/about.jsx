@@ -35,22 +35,23 @@ const FloatingArrow = ({ className }) => {
 
 // Styled component for a container of service cards
 const ServiceCardContainer = styled.div`
-  width: 90%;
+  width: 50%;
   display: grid;
-  gap: 10px;
+  gap: 20px;
   margin-bottom: 20px;
-  padding: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
 
-  @media (max-width: 640px) {
+  @media (max-width: 660px) {
     grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;
-    margin-right: 100px;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='w-full silver-gradient rounded-[20px]'>
+  <Tilt className='w-full silver-gradient rounded-[20px] w-[200px] grid items-center justify-center'>
     <motion.div
       variants={fade("right", "spring", index * 0.5, 0.7)}
       className='p-[1px] rounded-[10px]'
@@ -80,18 +81,17 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <section id="about" className="h-full custom-top-margin mt-[100px] flex flex-col items-center justify-center h-screen">
+    <section id="about" className="h-[100%] custom-top-margin flex flex-col items-center justify-center h-screen">
       <motion.div>
         <h2 className={styles.pHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
-        className='m-4 text-secondary text-[15px] max-w-5xl leading-[30px]'
+        className='m-1 text-secondary text-[15px] max-w-5xl leading-[30px]'
       >
         I'm a biochemist turned web developer passionate about creating accessible and inclusive digital content.
         With a PhD background in biochemistry, I bring a unique problem-solving perspective to data analysis.
-        After completing a web development course in 2023, I strive to deliver exceptional digital experiences
-        that prioritize accessibility and inclusivity. When not coding, I enjoy music, nature, and sports.
+        When not coding, I enjoy music, nature, and sports.
       </motion.p>
 
       <p className='m-4 text-secondary text-lg font-semibold max-w-5xl leading-[30px]'>

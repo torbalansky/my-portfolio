@@ -37,16 +37,16 @@ const FloatingArrow = ({ className }) => {
 const ProjectCardContainer = styled.div`
   display: -ms-grid;
   display: grid;
-  gap: 10px;
-  padding: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+  gap: 50px;
+  padding: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   @supports (-moz-appearance: none) {
     gap: 20px;
   }
 
   @media (max-width: 640px) {
-    grid-template-columns: repeat(1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin: auto;
     width: 100%;
     padding-right: 40px;
@@ -64,24 +64,17 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
         }}
         className='violet-gradient p-5 rounded-2xl sm:w-[400px] w-full grid-container'
       >
-        <div className='relative w-full h-[280px] ie-img'>
+        <div className='relative w-full h-[280px]'>
           <img
             src={image}
             alt='project_image'
             className='w-full h-full object-fill rounded-2xl'
           />
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover grid-container'>
-            <div
-              onClick={() => window.open(source_code, "_blank")}
-              className='green-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
           </div>
-          </div>
-        </div>
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code, "_blank")}
-              className='w-20 h-20 rounded-full flex justify-center items-center cursor-pointer'
+              className='w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
                 src={github}
@@ -111,7 +104,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
 
 const Work = () => {
   return (
-    <section id="work" className="h-full mt-[100px] items-center justify-center h-screen mb-[50px]">
+    <section id="work" className="h-full grid items-center justify-center">
         <h2 className={`${styles.pHeadText} text-center`}>My work.</h2>
       <ProjectCardContainer>
         {projects.map((projects, index) => (
