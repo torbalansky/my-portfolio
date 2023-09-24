@@ -97,9 +97,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full h-full flex xl:flex-row flex-col-reverse overflow-hidden custom-media3">
-      <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row pb-6">
-        <div className="max-w-7xl mx-auto p-5 bg-gray-700 text-white">
+    <section
+    id="contact"
+    className={`w-full h-full flex xl:flex-row flex-col-reverse overflow-hidden custom-media3 md:flex-col ${
+      'lg:mt-0 md:mt-10 sm:mt-20' }`}
+  >
+    <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row pb-6">
+      <div className="max-w-7xl mx-auto p-5 text-white">
           <p>Contact Information: torbalansky@gmail.com</p>
           <p>Phone: +351910808938</p>
           <div className="flex flex-row justify-between mt-2">
@@ -110,15 +114,13 @@ const Contact = () => {
         </div>
       </div>
       <div className="w-full flex flex-col md:flex-row items-center justify-center space-y-2 custom-media3">
-        <div className="md:p-20 w-full md:w-[50%]">
-          <p className={`text-[40px] mt-2 p-5`}>Contact.</p>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
             className="mt-5 mx-auto flex flex-col gap-4 items-center"
           >
               <label className="flex flex-col w-[300px]">
-                <span className="text-white font-medium mb-1">Your Name</span>
+                <span className="text-white font-medium mb-1">Get in touch:<br></br>Your Name</span>
                 <input
                   type="text"
                   name="name"
@@ -151,7 +153,6 @@ const Contact = () => {
                   className="bg-tertiary py-1 px-2 placeholder:text-secondary text-white border border-1px font-medium w-[300px] hover:bg-gray-800"
                 />
               </label>
-
               <button
                 type="submit"
                 className="bg-blue-600 py-2 text-white font-bold shadow-md shadow-primary w-[300px] hover:bg-blue-800 mb-4"
@@ -162,7 +163,6 @@ const Contact = () => {
         </div>
         <div className="flex flex-0.5 w-full h-screen custom-media2">
           <Map></Map>
-        </div>
       </div>
       <div>
         <Link to="/work">
