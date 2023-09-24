@@ -160,12 +160,10 @@
   }
 }
 
-/* Add your existing CSS here */
-
 /* Apply specific styles only for Mozilla Firefox */
 @supports (-moz-appearance: none) {
   .custom-media3 {
-    gap: 10px; /* Adjust the gap as needed for Firefox */
+    gap: 10px; 
     margin-top: 25px;
     padding: 5px;
     font-size: 14px;
@@ -226,3 +224,4 @@ section {
     margin: 50px 20px 70px 20px;
   }
 }
+

@@ -12,10 +12,10 @@ const FloatingArrow = ({ className }) => {
   return (
     <motion.div
       animate={{
-        x: [0, 20, 0],
+        x: [0, 10, 0],
       }}
       transition={{
-        duration: 1.5,
+        duration: 2,
         repeat: Infinity,
         repeatType: "loop",
       }}
@@ -26,8 +26,33 @@ const FloatingArrow = ({ className }) => {
         borderBottom: "10px solid transparent",
         borderLeft: "20px solid #d1f8fd",
         position: "fixed",  
-        bottom: "40px",
+        bottom: "0",
         right: "20px",
+      }}
+    ></motion.div>
+  );
+};
+
+const FloatingArrowBack = ({ className }) => {
+  return (
+    <motion.div
+      animate={{
+        x: [0, 10, 0],
+      }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "loop",
+      }}
+      className={`w-6 h-6 ${className}`}
+      style={{
+        background: "transparent",
+        borderTop: "10px solid transparent",
+        borderBottom: "10px solid transparent",
+        borderRight: "20px solid #d1f8fd",
+        position: "fixed",
+        bottom: "0", 
+        left: "20px",
       }}
     ></motion.div>
   );
@@ -109,6 +134,11 @@ const About = () => {
       <div>
         <Link to="/work">
           <FloatingArrow />
+        </Link>
+      </div>
+      <div>
+      <Link to="/home">
+          <FloatingArrowBack />
         </Link>
       </div>
     </section>

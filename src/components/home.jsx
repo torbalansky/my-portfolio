@@ -10,10 +10,10 @@ const FloatingArrow = ({ className }) => {
   return (
     <motion.div
       animate={{
-        x: [0, 20, 0],
+        x: [0, 10, 0],
       }}
       transition={{
-        duration: 1.5,
+        duration: 2,
         repeat: Infinity,
         repeatType: "loop",
       }}
@@ -24,7 +24,7 @@ const FloatingArrow = ({ className }) => {
         borderBottom: "10px solid transparent",
         borderLeft: "20px solid #d1f8fd",
         position: "fixed",  
-        bottom: "40px",
+        bottom: "0",
         right: "20px",
       }}
     ></motion.div>

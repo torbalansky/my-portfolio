@@ -109,7 +109,7 @@ const projects = [
       },
     ],
     image: myFlix_react,
-    source_code: "https://myflix-torbalansky.netlify.app/",
+    source_code: "https://github.com/torbalansky/myFlix-client",
   },
 
   {
@@ -131,7 +131,7 @@ const projects = [
       },
     ],
     image: MyFlix_Angular,
-    source_code: "https://myflix-angular-client-torbalansky.netlify.app/welcome",
+    source_code: "https://github.com/torbalansky/myFlix-Angular-client",
   },
 
   {

@@ -4,6 +4,34 @@ import Map from "./map";
 import facebookIcon from "../img/facebook.png";
 import twitterIcon from "../img/twitter.png";
 import githubIcon from "../img/github_logo.png";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+
+const FloatingArrow = ({ className }) => {
+  return (
+    <motion.div
+      animate={{
+        x: [0, 10, 0],
+      }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "loop",
+      }}
+      className={`w-6 h-6 ${className}`}
+      style={{
+        background: "transparent",
+        borderTop: "10px solid transparent",
+        borderBottom: "10px solid transparent",
+        borderRight: "20px solid #d1f8fd",
+        position: "fixed",  
+        bottom: "0",
+        left: "20px",
+      }}
+    ></motion.div>
+  );
+};
 
 const Contact = () => {
   // Create a reference to the form element
@@ -70,7 +98,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="w-full h-full flex xl:flex-row flex-col-reverse overflow-hidden custom-media3">
-      <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row">
+      <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row pb-6">
         <div className="max-w-7xl mx-auto p-5 bg-gray-700 text-white">
           <p>Contact Information: torbalansky@gmail.com</p>
           <p>Phone: +351910808938</p>
@@ -83,7 +111,7 @@ const Contact = () => {
       </div>
       <div className="w-full flex flex-col md:flex-row items-center justify-center space-y-2 custom-media3">
         <div className="md:p-20 w-full md:w-[50%]">
-          <p className={`text-[40px] mt-2 p-5`}>Contact</p>
+          <p className={`text-[40px] mt-2 p-5`}>Contact.</p>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
@@ -135,6 +163,11 @@ const Contact = () => {
         <div className="flex flex-0.5 w-full h-screen custom-media2">
           <Map></Map>
         </div>
+      </div>
+      <div>
+        <Link to="/work">
+          <FloatingArrow />
+        </Link>
       </div>
     </section>
   );
