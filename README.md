@@ -1,6 +1,7 @@
 ## My Personal Website
 
 Welcome to the documentation for my personal website.
+[Visit my portfolio website](https://patso-portfolio.vercel.app/)
 
 ### Overview
 
@@ -22,10 +23,10 @@ To get started with my personal website, follow these steps:
 
 ```bash
 # Clone the Repository:
-git clone https://github.com/your-username/your-personal-website.git
+git clone https://github.com/torbalansky/my-portfolio
 
 # Navigate to the Project Directory:
-cd your-personal-website
+cd my-portfolio
 
 # Install Dependencies:
 npm install
