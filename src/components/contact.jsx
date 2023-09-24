@@ -104,7 +104,7 @@ const Contact = () => {
   >
     <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row pb-6">
       <div className="max-w-7xl mx-auto p-5 text-white">
-          <p>Contact Information: torbalansky@gmail.com</p>
+          <p>Contact: torbalansky@gmail.com</p>
           <p>Phone: +351910808938</p>
           <div className="flex flex-row justify-between mt-2">
           <a href="https://www.facebook.com/patzu.rs"><img src={facebookIcon} alt="Facebook" /></a>
@@ -128,6 +128,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your name..."
                   className="bg-tertiary py-1 px-2 placeholder:text-secondary text-white outline-none border border-1px font-medium hover:bg-gray-800"
+                  required
                 />
               </label>
               <label className="flex flex-col">
@@ -139,8 +140,12 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your e-mail..."
                   className="bg-tertiary py-1 px-2 placeholder:text-secondary text-white outline-none border border-1px font-medium w-[300px] hover:bg-gray-800"
+                  required 
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                 />
               </label>
+              {form.email !== "" && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(form.email) && (
+              <p className="text-red-600">Invalid email format.</p>)}
               <label className="flex flex-col">
                 <span className="text-white font-medium mb-2">Your Message</span>
                 <textarea
