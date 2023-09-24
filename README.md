@@ -1,7 +1,9 @@
 ## My Personal Website
 
 Welcome to the documentation for my personal website.
-[Visit my portfolio website](https://patso-portfolio.vercel.app/)
+
+
+-[Take a look](https://patso-portfolio.vercel.app/)
 
 ### Overview
 
