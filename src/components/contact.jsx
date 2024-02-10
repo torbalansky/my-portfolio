@@ -107,7 +107,7 @@ const Contact = () => {
           <p>Contact: patzostatev@gmail.com</p>
           <p>Phone: +351910808938</p>
           <div className="flex flex-row justify-between mt-2">
-          <a href="https://www.linkedin.com/in/plamen-statev-808bbb2b3/"><img src={linkedinIcon} alt="LinkedIn" /></a>
+          <a href="https://www.linkedin.com/in/plamenstatev/"><img src={linkedinIcon} alt="LinkedIn" /></a>
            <a href="https://twitter.com/pstathis2"><img src={twitterIcon} alt="Twitter" /></a>
           <a href="https://github.com/torbalansky"><img src={githubIcon} alt="GitHub" /></a>
           </div>
