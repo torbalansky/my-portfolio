@@ -47,7 +47,8 @@ const Home = () => {
           </p>
           <a href="https://github.com/torbalansky" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-10 inline-block">
           Visit my GitHub
-       </a>
+          </a>
+          <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2 inline-block"><a href="plamen_statev_resume.pdf" class="button__code" download>Download my CV</a></div>
         </div>
       </div>
       </div>
@@ -62,7 +63,9 @@ const Home = () => {
             <MeshDistortMaterial color="#804dee" attach="material" distort={0.6} speed={0.4}/>
             </Sphere>
           </Canvas>
-          <img src={homeImg} alt="HomeImage" className="w-[300px] h-[300px] object-contain absolute inset-0 m-auto animate-spin-slow alternate ease-in-out infinite home_img"/>
+          <img src={homeImg} alt="HomeImage" 
+          className="w-[300px] h-[300px] object-contain absolute inset-0 m-auto animate-spin-slow alternate ease-in-out infinite home_img" 
+          style={{ borderRadius: '50%' }}/>
         </div>
       <div>
         <Link to="/about">

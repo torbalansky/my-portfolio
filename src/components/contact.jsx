@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser"; // Import emailjs library for sending emails
 import Map from "./map";
-import facebookIcon from "../img/facebook.png";
+import linkedinIcon from "../img/linkedin.png";
 import twitterIcon from "../img/twitter.png";
 import githubIcon from "../img/github_logo.png";
 import { Link } from "react-router-dom";
@@ -104,10 +104,10 @@ const Contact = () => {
   >
     <div className="w-full flex flex-col items-center justify-center space-y-2 md:flex-row pb-6">
       <div className="max-w-7xl mx-auto p-5 text-white">
-          <p>Contact: torbalansky@gmail.com</p>
+          <p>Contact: patzostatev@gmail.com</p>
           <p>Phone: +351910808938</p>
           <div className="flex flex-row justify-between mt-2">
-          <a href="https://www.facebook.com/patzu.rs"><img src={facebookIcon} alt="Facebook" /></a>
+          <a href="https://www.linkedin.com/in/plamen-statev-808bbb2b3/"><img src={linkedinIcon} alt="LinkedIn" /></a>
            <a href="https://twitter.com/pstathis2"><img src={twitterIcon} alt="Twitter" /></a>
           <a href="https://github.com/torbalansky"><img src={githubIcon} alt="GitHub" /></a>
           </div>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { fade } from "../animations";
 import { Tilt } from 'react-tilt'; // React Tilt library for interactive tilting effect
 import { tech } from "../constants";
+import homeImg from "../img/home.jpg";
 
 // A component for a floating arrow animation
 const FloatingArrow = ({ className }) => {
@@ -108,20 +109,29 @@ const About = () => {
   return (
     <section id="about" className="h-[100%] custom-top-margin flex flex-col items-center justify-center h-screen">
       <motion.div>
-        <h2 className={styles.pHeadText}>Overview.</h2>
+        <h2 className={styles.pHeadText}>About.</h2>
       </motion.div>
-
+     
       <motion.p
-        className='m-1 text-secondary text-[15px] max-w-5xl leading-[30px]'
+        className='m-1 text-secondary text-center text-[15px] max-w-5xl leading-[30px]'
       >
         I'm a biochemist turned web developer passionate about creating accessible and inclusive digital content.
-        With a PhD background in biochemistry, I bring a unique problem-solving perspective to data analysis.
+        Leveraging my background in research, I offer a unique problem-solving perspective to tackle challenges in web development.
         When not coding, I enjoy music, nature, and sports.
-      </motion.p>
 
-      <p className='m-4 text-secondary text-lg font-semibold max-w-5xl leading-[30px]'>
+        
+
+      </motion.p>
+      
+      <p className='m-4 text-secondary text-center text-[20px] font-bold max-w-5xl leading-[30px]'>
         <span className="text-white-800">
-          In the past year, I have been trying to master the following tech stacks:
+          My motto is: 'Simplicity is the ultimate sophistication.'
+        </span>
+      </p>
+
+      <p className='m-4 text-secondary text-[30px] font-semibold max-w-5xl leading-[40px]'>
+        <span className="text-white-800">
+          Soft skills:
         </span>
       </p>
 

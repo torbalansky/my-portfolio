@@ -13,13 +13,15 @@ import reactjs from "./tech/reactjs.png";
 import aws from "./tech/aws.png";
 import angular from "./tech/angularjs.png";
 import typescript from "./tech/typescript.png";
+import python from "./tech/python.png";
+import django from "./tech/django.png";
 
 import meet from "./meet.png";
 import myFlix_react from "./myFlix_react.jpg";
-import MyFlix_Angular from "./MyFlix_Angular.png";
 import chat_app from "./chat_app.jpg";
-import star_wars from "./star_wars.jpg";
+import recipe_app from "./recipe_app.png";
 import movie_api from "./movie_api.png";
+
 
 export {
   logo,
@@ -38,8 +40,9 @@ export {
   typescript,
   meet,
   myFlix_react,
-  MyFlix_Angular,
   chat_app,
-  star_wars,
+  recipe_app,
   movie_api,
+  python,
+  django
 };

@@ -12,11 +12,12 @@ import {
   git,
   meet,
   myFlix_react,
-  star_wars,
+  recipe_app,
   chat_app,
-  MyFlix_Angular,
   movie_api,
-  angular
+  angular,
+  python,
+  django
 } from "../img";
 
 // Array of technology stacks with titles and corresponding icons
@@ -61,14 +62,45 @@ const tech = [
     title: "git",
     icon: git,
   },
+
+  {
+    title: "Python",
+    icon: python,
+  },
+  {
+    title: "Django",
+    icon: django,
+  },
 ];
 
 // Array of project details, including name, description, tags, image, and source code URL
 const projects = [
+
+  {
+    name: "Recipe App",
+    description:
+      "The Recipe App is a dynamic web platform developed with Django, Python, HTML, CSS, and JavaScript. It enables users to explore, organize, and share their favorite recipes effortlessly. With intuitive features, users can download, create, and interact with recipes through comments.",
+    tags: [
+      {
+        name: "pyhton",
+        color: "blue-gradient",
+      },
+      {
+        name: "django",
+        color: "green-gradient",
+      },
+      {
+        name: "postgreSQL",
+        color: "orange-gradient",
+      },
+    ],
+    image: recipe_app,
+    source_code: "https://github.com/torbalansky/recipe-app",
+  },
   {
     name: "Movie API",
     description:
-      "This REST API acts as a communication bridge between myFlix frontend applications (React and Angular) and the MongoDB Database. It enables the retrieval of movie data from the database and handles various user actions such as registration, login, accessing movie details, managing favorites, user info editing, and account deletion.",
+      "This REST API acts as a communication bridge between myFlix frontend applications and the MongoDB. It enables the retrieval of movie data from the database and handles various user actions such as registration, login, accessing movie details, managing favorites, user info editing, and account deletion.",
     tags: [
       {
         name: "node",
@@ -113,34 +145,12 @@ const projects = [
   },
 
   {
-    name: "Myflix-Angular",
+    name: "Meet App",
     description:
-      "MyFlix Angular is a dynamic and user-friendly web application built with Angular, TypeScript, HTML, and SCSS. Utilizing MongoDB, Express.js, and Node.js on the backend, it allows users to explore movie details, such as descriptions, genres, directors, ratings, and reviews, and create a personalized list of favorite films.",
+      "MeetApp is a web application developed following the principles of test-driven development. It's designed to work without needing a server, and it's built using technologies like React and JavaScript. It also makes use of the Google Calendar API to get information about upcoming events and relies on AWS Lambda to handle user access securely.",
     tags: [
       {
         name: "reactjs",
-        color: "blue-gradient",
-      },
-      {
-        name: "angular",
-        color: "green-gradient",
-      },
-      {
-        name: "typescript",
-        color: "orange-gradient",
-      },
-    ],
-    image: MyFlix_Angular,
-    source_code: "https://github.com/torbalansky/myFlix-Angular-client",
-  },
-
-  {
-    name: "Meet App",
-    description:
-      "MeetApp is a web application developed following the principles of test-driven development (TDD). It's designed to work without needing a server, and it's built using technologies like React and JavaScript. It also makes use of the Google Calendar API to get information about upcoming events and relies on AWS Lambda to handle user access securely.",
-    tags: [
-      {
-        name: "react",
         color: "blue-gradient",
       },
       {
@@ -148,34 +158,12 @@ const projects = [
         color: "green-gradient",
       },
       {
-        name: "CSS",
+        name: "css",
         color: "orange-gradient",
       },
     ],
     image: meet,
     source_code: "https://github.com/torbalansky/meet",
-  },
-
-  {
-    name: "SWAPI Planets Explorer",
-    description:
-      "The SWAPI app is a simple web application that lets users search for and view information about different star wars planets. It's built using HTML, CSS, JavaScript, Bootstrap, and jQuery. It uses the SWAPI to retrieve data about planets.",
-    tags: [
-      {
-        name: "javascript",
-        color: "blue-gradient",
-      },
-      {
-        name: "html",
-        color: "green-gradient",
-      },
-      {
-        name: "css",
-        color: "orange-gradient",
-      },
-    ],
-    image: star_wars,
-    source_code: "https://github.com/torbalansky/swapi-planets-explorer",
   },
 
   {
